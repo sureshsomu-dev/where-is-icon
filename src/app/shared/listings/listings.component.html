@@ -9,7 +9,7 @@
     <div class="p-2 flex-wrap gap-2 w-full grid grid-cols-2 sm:grid-cols-6">
         <div class="flex flex-col flex-auto max-w-50 items-center bg-card shadow rounded-2xl overflow-hidden"
             *ngFor="let cex of filterExchange()">
-            <div class="flex flex-col flex-auto w-full p-8 text-center">
+            <div class="flex flex-col flex-auto w-full p-2 text-center">
                 <div class="w-15 h-15 mx-auto rounded-full overflow-hidden">
                     <img class="w-full h-full object-cover" [src]="cex?.image">
                 </div>
@@ -17,10 +17,10 @@
                 <div class="text-secondary">24hr Vol: {{numberToReadable(cex.converted_volume.usd)}}+</div>
                 <!-- <div class="text-secondary">#{{cex.cexRank}}</div> -->
             </div>
-            <div class="flex items-center w-full border-t divide-x">
+            <div class="flex items-center w-full border-t bg-primary divide-x">
                 <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover cursor-pointer"
                     (click)="goToTrade(cex.trade_url)">
-                    <mat-icon class="icon-size-5 text-hint"
+                    <mat-icon class="icon-size-5 dark:text-white"
                         [svgIcon]="'heroicons_outline:presentation-chart-line'"></mat-icon>
                     <span class="ml-2">Trade</span>
                 </a>

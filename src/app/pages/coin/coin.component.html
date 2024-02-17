@@ -29,6 +29,7 @@
         <div class="flex flex-col items-center">
             <div
                 class="mt-1 items-center flex gap-4 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
+                <span class="rounded-full text-4xl underline">#{{coinDetails?.market_cap_rank}}</span>
                 <span>{{coinDetails?.name}}</span>
                 <img class="w-10 h-10 justify-self-end object-cover rounded-full" [src]="coinDetails?.image.large">
             </div>

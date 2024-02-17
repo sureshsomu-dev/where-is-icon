@@ -5,7 +5,9 @@
         <input matInput [autocomplete]="'off'" [(ngModel)]="searchInput" (input)="getSearchResults()"
             [placeholder]="'Search Crypto EX: Doge'" #searchField>
     </mat-form-field>
-    <div class="relative w-full mt-5 bg-card shadow-md rounded-xl">
+    <div class="relative w-full mt-5 bg-card shadow-md rounded-xl" style="
+    z-index: 1000;
+">
         <div class="result-item items-center flex w-full gap-4 p-3 hover:bg-gray-400 cursor-pointer"
             (click)="getCoinDetails(coin)" *ngFor="let coin of searchResults">
             <img class="w-6 h-6 object-cover rounded-full" [src]="coin.thumb" alt="">
