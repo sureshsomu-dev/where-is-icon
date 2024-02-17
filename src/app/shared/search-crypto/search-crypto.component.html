@@ -1,0 +1,16 @@
+<div class="grid relative items-center w-full">
+    <!-- <search [appearance]="'basic'" class="w-1/2 mx-auto mt-4"/> -->
+    <mat-form-field class="fuse-mat-rounded fuse-mat-dense w-full  mt-4" [subscriptSizing]="'dynamic'">
+        <mat-icon matPrefix class="icon-size-5" [svgIcon]="'heroicons_solid:magnifying-glass'"></mat-icon>
+        <input matInput [autocomplete]="'off'" [(ngModel)]="searchInput" (input)="getSearchResults()"
+            [placeholder]="'Search Crypto EX: Doge'" #searchField>
+    </mat-form-field>
+    <div class="relative w-full mt-5 bg-card shadow-md rounded-xl">
+        <div class="result-item items-center flex w-full gap-4 p-3 hover:bg-gray-400 cursor-pointer"
+            (click)="getCoinDetails(coin)" *ngFor="let coin of searchResults">
+            <img class="w-6 h-6 object-cover rounded-full" [src]="coin.thumb" alt="">
+            <h1 class="font-bold text-sm">{{coin.name}}</h1>
+            <h1 class="font-light text-xs">#{{coin.market_cap_rank}} </h1>
+        </div>
+    </div>
+</div>

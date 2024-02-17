@@ -1,0 +1,38 @@
+<!-- NEWWWWWWWWWWWWW -->
+<!-- <app-search-crypto/> -->
+<div class="relative flex flex-col flex-auto min-w-0 overflow-hidden" *ngIf="coinDetails && coinDetails.name">
+    <div class="w-full flex flex-col mx-auto justify-center">
+        <div class="flex items-center justify-center mx-2 lg:mr-8">
+            <div class="lg:flex" (click)="navigateHome()">
+                <!-- Light version -->
+                <img class="dark:hidden w-50" src="assets/images/logo/light-bg.svg" alt="Logo image">
+                <!-- Dark version -->
+                <img class="hidden dark:flex w-50" src="assets/images/logo/dark-bg.svg" alt="Logo image">
+            </div>
+            <!-- Small version -->
+            <!-- <img class="flex lg:hidden w-8" src="assets/images/logo/dark-bg.svg" alt="Logo image"> -->
+        </div>
+        <div class="w-ful md:w-1/2 md:mx-auto -mt-12">
+            <app-search-crypto />
+        </div>
+    </div>
+    <!-- Header & Cards -->
+    <div class="relative mt-2 overflow-hidden">
+        <!-- Background - @formatter:off -->
+        <svg class="-z-1 absolute inset-0" viewBox="0 0 960 540" width="100%" height="100%"
+            preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+            <g class="opacity-40 text-gray-200 dark:text-gray-800" fill="none" stroke="currentColor" stroke-width="100">
+                <circle r="234" cx="196" cy="23"></circle>
+                <circle r="234" cx="790" cy="491"></circle>
+            </g>
+        </svg>
+        <div class="flex flex-col items-center">
+            <div
+                class="mt-1 items-center flex gap-4 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
+                <span>{{coinDetails?.name}}</span>
+                <img class="w-10 h-10 justify-self-end object-cover rounded-full" [src]="coinDetails?.image.large">
+            </div>
+        </div>
+        <app-listings />
+    </div>
+</div>

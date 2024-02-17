@@ -1,0 +1,30 @@
+<div class="flex mx-4 my-4 flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden">
+    <!-- <div class="my-4 mx-auto w-10/12 lg:w-1/2">
+        <mat-form-field class="fuse-mat-rounded fuse-mat-dense w-full" [subscriptSizing]="'dynamic'">
+            <mat-icon matPrefix class="icon-size-5" [svgIcon]="'heroicons_solid:magnifying-glass'"></mat-icon>
+            <input matInput [autocomplete]="'off'" [(ngModel)]="searchInput" (input)="filterExchange()"
+                [placeholder]="'Search Exchange'" #searchField>
+        </mat-form-field>
+    </div> -->
+    <div class="p-2 flex-wrap gap-2 w-full grid grid-cols-2 sm:grid-cols-6">
+        <div class="flex flex-col flex-auto max-w-50 items-center bg-card shadow rounded-2xl overflow-hidden"
+            *ngFor="let cex of filterExchange()">
+            <div class="flex flex-col flex-auto w-full p-8 text-center">
+                <div class="w-15 h-15 mx-auto rounded-full overflow-hidden">
+                    <img class="w-full h-full object-cover" [src]="cex?.image">
+                </div>
+                <div class="mt-6 font-medium">{{cex.market.name}}</div>
+                <div class="text-secondary">24hr Vol: {{numberToReadable(cex.converted_volume.usd)}}+</div>
+                <!-- <div class="text-secondary">#{{cex.cexRank}}</div> -->
+            </div>
+            <div class="flex items-center w-full border-t divide-x">
+                <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover cursor-pointer"
+                    (click)="goToTrade(cex.trade_url)">
+                    <mat-icon class="icon-size-5 text-hint"
+                        [svgIcon]="'heroicons_outline:presentation-chart-line'"></mat-icon>
+                    <span class="ml-2">Trade</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
