@@ -6,20 +6,22 @@
                 [placeholder]="'Search Exchange'" #searchField>
         </mat-form-field>
     </div> -->
-    <div class="p-2 flex-wrap gap-2 w-full grid grid-cols-2 sm:grid-cols-6">
-        <div class="flex flex-col flex-auto max-w-50 items-center bg-card shadow rounded-2xl overflow-hidden"
+    <!-- <button type="button" (click)="captureAndDownloadImage()">Download Listings</button> -->
+    <div class="p-2 w-full flex flex-wrap gap-2" id="listings_details">
+        <div class="flex flex-col border border-secondary flex-auto w-30 max-w-30 items-center bg-card shadow rounded-2xl overflow-hidden"
             *ngFor="let cex of filterExchange()">
             <div class="flex flex-col flex-auto w-full p-2 text-center">
                 <div class="w-15 h-15 mx-auto rounded-full overflow-hidden">
-                    <img class="w-full h-full object-cover" [src]="cex?.image">
+                    <div style="background-image: url('{{cex?.image}}'); width: 100%; height: 100%; background-size: cover;z-index: 1000;"></div>
+
+                    <!-- <img class="w-full h-full object-cover" [src]="cex?.image"> -->
                 </div>
                 <div class="mt-6 font-medium">{{cex.market.name}}</div>
-                <div class="text-secondary">24hr Vol: {{numberToReadable(cex.converted_volume.usd)}}+</div>
+                <!-- <div class="text-secondary">24hr Vol: {{numberToReadable(cex.converted_volume.usd)}}+</div> -->
                 <!-- <div class="text-secondary">#{{cex.cexRank}}</div> -->
             </div>
-            <div class="flex items-center w-full border-t bg-primary divide-x">
-                <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover cursor-pointer"
-                    (click)="goToTrade(cex.trade_url)">
+            <div class="flex items-center w-full border-t divide-x shadow-xl" (click)="goToTrade(cex.trade_url)">
+                <a class="flex flex-auto items-center justify-center py-4 hover:bg-hover cursor-pointer">
                     <mat-icon class="icon-size-5 dark:text-white"
                         [svgIcon]="'heroicons_outline:presentation-chart-line'"></mat-icon>
                     <span class="ml-2">Trade</span>

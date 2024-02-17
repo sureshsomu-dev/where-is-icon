@@ -27,6 +27,7 @@ export class SearchCryptoComponent {
   getSearchResults() {
     if (this.searchInput.length >= 3)
       this.apiService.getSearchResults(this.searchInput).subscribe((data) => {
+        data.coins = data.coins.filter((coin: any) => coin.market_cap_rank > 0)
         if (data && data.coins && data.coins.length > 5) {
           this.searchResults = data.coins.slice(0, 5);
         } else {
@@ -44,7 +45,7 @@ export class SearchCryptoComponent {
           this.apiService.coinDetails.next(data);
           this.searchResults = [];
           this.searchInput = '';
-          this.router.navigate([currentUrl, coin.id])
+          this.router.navigate([coin.id])
         })
     }
   }

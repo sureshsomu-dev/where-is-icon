@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { cloneDeep } from 'lodash';
 import _ from 'lodash';
+import html2canvas from 'html2canvas';
+import * as fileSaver from 'file-saver';
+
 
 @Component({
   selector: 'app-listings',
@@ -75,5 +78,17 @@ export class ListingsComponent {
         return object.market.name.toLowerCase().includes(this.searchInput.toLowerCase());
       });
     } else return this.cexDetails;
+  }
+  captureAndDownloadImage(): void {
+    const element = document.getElementById('listings_details'); // Add an id to the container div
+    
+    if (element) {
+      html2canvas(element).then((canvas) => {
+        // Convert canvas to blob and save as image
+        canvas.toBlob((blob: any) => {
+          fileSaver.saveAs(blob, 'whereiscoin_image.png');
+        });
+      });
+    }
   }
 }
