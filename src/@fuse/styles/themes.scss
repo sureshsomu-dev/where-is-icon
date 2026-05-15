@@ -62,18 +62,18 @@ $dark-base: (
         slider-off-active: #94A3B8 /* slate.400 */
     ),
     background: (
-        status-bar: #0F172A, /* slate.900 */
-        app-bar: #0F172A, /* slate.900 */
-        background: #0F172A, /* slate.900 */
+        status-bar: black, /* slate.900 */
+        app-bar: black, /* slate.900 */
+        background: black, /* slate.900 */
         hover: rgba(255, 255, 255, 0.05),
         card: #1E293B, /* slate.800 */
         dialog: #1E293B, /* slate.800 */
         disabled-button: rgba(15, 23, 42, 0.38), /* slate.900 + opacity */
-        raised-button: #0F172A, /* slate.900 */
+        raised-button: black, /* slate.900 */
         focused-button: #E2E8F0, /* slate.200 */
         selected-button: rgba(255, 255, 255, 0.05),
         selected-disabled-button: #1E293B, /* slate.800 */
-        disabled-button-toggle: #0F172A, /* slate.900 */
+        disabled-button-toggle: black, /* slate.900 */
         unselected-chip: #475569, /* slate.600 */
         disabled-list-option: #E2E8F0, /* slate.200 */
         tooltip: #64748B /* slate.500 */

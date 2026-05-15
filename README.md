@@ -1,27 +1,20 @@
-# Fuse - Admin template and Starter project for Angular
+# Where Is Coin (WIC)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
+Find 10000+ crypto coins, discover where they are traded, and navigate easily to those exchanges. 
 
-## Development server
+### 🚀 Modern UI, Modern Approach
+Built for speed and clarity. No confusion, no unnecessary clutter. Just the information you need to start trading.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠 Features
+- **Massive Database**: Access data for over 10,000+ cryptocurrencies.
+- **Exchange Discovery**: Instantly find which exchanges list your favorite coins.
+- **Seamless Navigation**: Direct links to trading pairs on supported exchanges.
+- **Clean Interface**: A distraction-free experience designed for modern traders.
 
-## Code scaffolding
+## 🎯 How it Works
+1. **Search**: Enter the name or symbol of any crypto coin.
+2. **Results**: See a comprehensive list of exchanges where the coin is available.
+3. **Trade**: Click on the exchange and enjoy trading!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.  To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+*Built with ❤️ for the crypto community.*

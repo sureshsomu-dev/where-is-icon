@@ -86,7 +86,7 @@ export const appConfig: ApplicationConfig = {
             },
             fuse   : {
                 layout : 'empty',
-                scheme : 'dark',
+                scheme : 'light',
                 screens: {
                     sm: '600px',
                     md: '960px',
